@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;600&family=Inter:wght@600;700;900&display=swap');
+
+@media only screen and (max-width: 1600px) {
+    ul{
+        display: flex;
+        flex-direction: row;
+    }
+
+    ul li{
+        list-style: none;
+    }
+    
+    .alas {
+        background-color: #132531;
+        border-radius: 50px 50px 0 0;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .item1 {
+        
+        padding-top: 100px;
+        margin-left: 90px;
+    }
+
+    .item1 h3 {
+        color: #FFFFFF;
+    }
+
+    .item1 h3 b{
+        font-size: 48px;
+    }
+
+    .item1 h3 b span{
+        color: #F1901D;
+    }
+
+    .item1 h3 .span{
+        color: #F5F5F5;
+        font-size: 15px;
+        margin-left: 300px;
+        background-color: #9ADFD5;
+        border-radius: 30px;
+        padding:10px;
+        padding-left: 40px;
+        padding-right: 40px;
+        font-weight: bold;
+        
+    }
+
+    .item2 {
+        color: #FFFFFF;
+        margin-top: 100px;
+        margin-left: 300px;
+        margin-bottom: 90px;
+    }
+
+    .item2 ul div h4 {
+        font-weight: bold;
+    }
+    
+    .item2 ul div {
+        margin-right: 200px;
+    }
+
+    .item2 ul div .span{
+        color: #FFF;
+        font-size: 10px;
+        font-style: normal;
+        font-family: 'Dosis', sans-serif;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+
+
+    .item3  {
+        background-color: #214055;
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .item3  h5{
+        padding-top: 10px;
+        color: #FFF;
+        font-family: Inter;
+        font-size: 15px;
+        font-style: normal;
+        line-height: normal;
+    }
+
+
+    
+}
+
+@media only screen and (max-width: 576px) {
+    ul{
+        display:contents;
+        flex-direction:unset;
+    }
+
+    ul li{
+        list-style: none;
+    }
+    
+    .alas {
+        background-color: #132531;
+        border-radius: 50px 50px 0 0;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .item1 {
+        
+        padding-top: 40px;
+        margin-left: 15px;
+    }
+
+    .item1 h3 {
+        color: #FFFFFF;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .item1 h3 b{
+        font-size: 28px;
+    }
+
+    .item1 h3 b span{
+        color: #F1901D;
+    }
+
+    .item1 h3 .span{
+        color: #F5F5F5;
+        font-size: 16px;
+        margin-left:0px;
+        margin-top: 17px;
+        margin-right: 20px;
+        background-color: #9ADFD5;
+        border-radius: 10px;
+        padding:10px;
+        font-weight: bold;
+        
+    }
+
+    .item2 {
+        color: #FFFFFF;
+        margin-top: 60px;
+        margin-left: 15px;
+        margin-bottom: 40px;
+    }
+
+    .item2 ul div h4 {
+        font-weight: bold;
+        font-size: 20px;
+        margin-right: 20px;
+    }
+    
+    .item2 ul div {
+        margin-right: 0px;
+    }
+
+    .item2 ul div .span{
+        color: #FFF;
+        font-size: 12px;
+        font-style: normal;
+        font-family: 'Dosis', sans-serif;
+        font-weight: 400;
+        line-height: normal;
+        margin-bottom: 40px;
+    }
+
+
+
+    .item3  {
+        background-color: #214055;
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .item3  h5{
+        padding-top: 10px;
+        color: #FFF;
+        font-family: Inter;
+        font-size: 11px;
+        font-style: normal;
+        line-height: normal;
+    }
+}

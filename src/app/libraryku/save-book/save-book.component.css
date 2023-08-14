@@ -1,0 +1,187 @@
+.img img{
+    width: 220px;
+    height: 320px;
+    border-radius: 30px;
+}
+
+.alas .bacground1 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #E5F8FF;
+    border-radius: 50px;
+}
+
+.alas .back .btn {
+    color: #000;
+    font-family: Dosis;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.64px;
+    border: none;
+}
+
+.alas .detail .btn {
+    width: 140px;
+    height: 39px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: #F1883C;
+    color: #FFF;
+    font-family: Dosis;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.36px;
+}
+
+.detail .detail_buku {
+    color: #000;
+    font-family: Dosis;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.44px;
+}
+
+.detail .row h2{
+    color: #000;
+    font-family: Dosis;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.4px;
+}
+
+.detail .row h4{
+    color: #666464;
+    font-family: Dosis;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.36px;
+}
+
+.detail .model_book h5{
+    color: #000;
+    font-family: Inter;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.56px;
+}
+.detail .model_book h4{
+    color: #000;
+    font-family: Dosis;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.4px;
+}
+.detail .model_book input{
+    width: 157px;
+    height: 31px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background: #D9D9D9;
+    color: #000;
+    font-family: Dosis;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.32px;
+    border: none;
+}
+.detail .model_book .btn1{
+    width: 150px;
+    height: 75px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background-color: #82FF96;
+    color: #FFF;
+    font-family: Dosis;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.6px;
+    border: none;
+}
+.detail .model_book .btn2{
+    width: 150px;
+    height: 75px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: #F00;
+    color: #FFF;
+    font-family: Dosis;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.6px;
+    border: none;
+}
+
+@media only screen and (max-width: 576px) {
+
+    .detail .row h2{
+        color: #000;
+        font-family: Dosis;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.4px;
+    }
+    
+    .detail .row h4{
+        color: #666464;
+        font-family: Dosis;
+        font-size: 8px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.36px;
+    }
+
+    .detail .model_book .btn1{
+        width: 100px;
+        height: 50px;
+        flex-shrink: 0;
+        border-radius: 20px;
+        background-color: #82FF96;
+        color: #FFF;
+        font-family: Dosis;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 1.6px;
+        border: none;
+    }
+    .detail .model_book .btn2{
+        width: 100px;
+        height: 50px;
+        flex-shrink: 0;
+        border-radius: 20px;
+        background: #F00;
+        color: #FFF;
+        font-family: Dosis;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 1.6px;
+        border: none;
+    }
+}

@@ -1,0 +1,191 @@
+@media only screen and (max-width: 1600px) {
+
+    .sign {
+        margin-top: 47px;
+        color: #FFF;
+        font-family: Inter;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 2.8px;
+    }
+
+
+    
+
+    .sign::before {
+        content: "";
+        width: 381px;
+        height: 66px;
+        flex-shrink: 0;
+        border-radius: 0 50px 50px 0;
+        background: #214055;
+        position: absolute;
+        z-index: -1;
+        top: 32px;
+        left: 0;
+        
+    }
+
+    .group{
+        margin-top: 50px;
+    }
+
+    input {
+        display: flex;
+        padding: 12px 16px;
+        align-items: center;
+        gap: 8px;
+        align-self: stretch;
+        border-radius: 8px;
+        border: 2px solid #D9D9D9;
+        background: #FFF;
+        color: #000;
+        font-family: Inter;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 160% */
+    }
+
+    button{
+        width: 136px;
+        height: 38px;
+        flex-shrink: 0;
+        border-radius: 50px;
+        background: #214055;
+        border: none;  
+        
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        overflow-y:hidden;
+
+    }
+    
+    .bottom-right {
+        background-color: blue;
+        color: white;
+        padding: 10px;
+    }
+
+    .container h5 {
+        text-align: right;
+        margin: 0; /* Hapus margin default pada <p> */
+        color: #000;
+        font-family: Dosis;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .img-responsive {
+        height: 100vh;
+        width: 110vh;
+        border-radius: 50% 0 0 50%;
+        position: absolute;
+        right: 0;
+        z-index: -1;
+    }
+    
+    .username {
+        margin-top: 170px;
+        margin-left: 100px;
+    }
+}
+
+
+img{
+    filter: brightness(50%) sepia(30%);
+}
+
+
+
+.img-responsive {
+    height: 100vh;
+    border-radius: 50% 0 0 50%;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+}
+
+.row {
+    max-width: 100%;
+    overflow-x: hidden; /* Menghilangkan scroll horizontal */
+}
+
+
+@media only screen and (max-width: 990px) {
+    img {
+        position: absolute;
+        z-index: -2;
+    }
+
+    .sign::before {
+        content: "";
+        width: 341px;
+        height: 66px;
+        flex-shrink: 0;
+        border-radius: 0 50px 50px 0;
+        background: #214055;
+        position: absolute;
+        z-index: -1;
+        top: 32px;
+        left: 0;
+        
+    }
+
+    .container h5 {
+        text-align: right;
+        margin: 0; /* Hapus margin default pada <p> */
+        color: #ffffff;
+        font-family: Dosis;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    input {
+        display: flex;
+        padding: 5px 7px;
+        align-items: center;
+        gap: 8px;
+        align-self: stretch;
+        border-radius: 8px;
+        border: 2px solid #D9D9D9;
+        background: #FFF;
+        color: #000;
+        font-family: Inter;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 160% */
+    }
+
+    .button {
+        margin-top: 120px;
+    }
+
+    .img-responsive {
+        height: 100vh;
+        width: 110vh;
+        border-radius: 50% 0 0 50%;
+        position: absolute;
+        right: 0;
+        z-index: -2;
+    }
+
+    .item1 {
+        position: absolute;
+    }
+
+    .username {
+        margin-top: 70px;
+        margin-left: 50px;
+    }
+}   

@@ -1,0 +1,551 @@
+
+@media only screen and (max-width: 1600px) {
+    .alas .item1{
+        width: 1065px;
+        height: 662px;
+        flex-shrink: 0;
+        margin-top: 130px;
+        margin-left: 10px;
+    }
+
+    .alas .item1 .desain .img {
+        width: 255px;
+        height: 212px;
+        position:absolute;
+        left: 240px;
+        top: 170px;
+    }
+
+    .alas .item1 .desain .isi {
+        width: 503px;
+        height: 559px;
+        padding-top: 200px;
+        padding-left: 60px;
+        border-radius: 50px;
+        margin-top: 100px;
+        background: #0060FF;
+        box-shadow: 0px 0.5985091924667358px 5.32008171081543px 0px rgba(0, 0, 0, 0.06), 0px 2.010267734527588px 17.869047164916992px 0px rgba(0, 0, 0, 0.09), 0px 9px 80px 0px rgba(0, 0, 0, 0.15);
+    }
+
+    .alas .item1 .desain .isi .selogan1 {
+        color: #FFF;
+        font-family: 'Alfa Slab One';
+        font-size: 60px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 6px;
+    }
+    .alas .item1 .desain .isi .selogan2 {
+        color: #FFF;
+        font-family: 'Archivo', sans-serif;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 5px;
+    }
+    
+    .alas .item1 .content  {
+        padding-left: 140px;
+    }
+    .alas .item1 .content .selamat {
+        color: #F1901D;
+        font-family: 'Dosis';
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+        letter-spacing: 2.5px;
+        margin-bottom: 80px;
+    }
+
+    .alas .item1 .content .datang {
+        color: #000;
+    }
+
+    .alas .item1 .content .motivasi {
+        color: #000;
+        text-align: justify;
+        font-family: 'Dosis', sans-serif;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-bottom: 70px;
+    }
+
+    .alas .item1 .content .selogan {
+        color: #000;
+        font-family: 'Dosis', sans-serif;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .alas .item1 .content .salam {
+        color: #000;
+        font-family: 'Dosis', sans-serif;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;    
+    }
+
+    .alas .item1 .content .botton {
+        color: #000;
+        font-family: 'Inter', sans-serif;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 1.1px;
+        margin-top: 40px;
+        border-radius: 50px;
+        background: #9ADFD5;
+        padding: 17px;
+        padding-left: 40px;
+        padding-right: 40px;
+        border: none;
+        
+
+    }
+
+    .item2 {
+        margin-top: 180px;
+        position: relative;
+    }
+
+    .item2 .featured {
+        color: #16A34A;
+        font-family: Dosis;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 90px;
+    }
+    
+    .item2 .featured::before {
+        content: "";
+        position: absolute;
+        width: 198.003px;
+        height: 6px;
+        background: #16A34A;
+        left: 550px;
+        top: 65px;
+    }
+
+    .item2 .featured span{
+        color: black;
+    }
+
+    .item2 .row{
+        margin-left: 55px;
+    }
+
+    .item2 .card{
+        width: 324px;
+        height: 269px;  
+        border: none;
+        box-shadow: 0px 6.650102138519287px 5.32008171081543px 0px rgba(0, 0, 0, 0.03), 0px 22.3363094329834px 17.869047164916992px 0px rgba(0, 0, 0, 0.04), 0px 100px 80px 0px rgba(0, 0, 0, 0.07);
+        border-radius: 30px;
+    }
+
+    .item2  img{ 
+        width: 108px;
+        height: 101px;
+        flex-shrink: 0;
+    }
+    .item2 .gambar {
+        display: flex;
+        justify-content: center;
+    }
+
+    .item3 {
+        margin-top: 100px;
+    }
+
+    .item3 .Latest {
+        color: #000;
+        font-family: Dosis;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 120px;
+    }
+
+    .item3 span {
+        color: #F1901D;
+    }
+
+    .item3 .card{
+        border: none;
+    }
+
+    .item3 img {
+        width: 155.475px;
+        height: 230.425px;
+        flex-shrink: 0;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+    
+    .item3 .gambar {
+        display: flex;
+        justify-content: center;
+    }
+
+    .item3 h5 {
+        color: #000;
+        font-family: Dosis;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .item3 h1 {
+        color: #000;
+        font-family: Dosis;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 30px;
+    }
+
+    .item3 p {
+        color: #000;
+        font-family: Dosis;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .item3 .card-body img {
+        width: 12px;
+        height: 12px;
+        flex-shrink: 0;
+        margin-right: 5px;
+    }
+
+    .item3 .bacground {
+        position: relative;
+        margin-right: 30px;
+    }
+
+    .item3 .card {
+        background-color: transparent;
+    }
+
+    .item3 .bacground::before {
+        position: absolute;
+        content: "";
+        top: 80px;
+        width: 216px;
+        height: 265.113px;
+        flex-shrink: 0;
+        border-radius: 50px 50px 10px 10px;
+        background: #F6F3EF;
+        box-shadow: 0px 3.724057197570801px 5.32008171081543px 0px rgba(0, 0, 0, 0.03), 0px 12.508333206176758px 17.869047164916992px 0px rgba(0, 0, 0, 0.04), 0px 56px 80px 0px rgba(0, 0, 0, 0.07);
+    }
+}
+
+
+
+.scrollable-container {
+    overflow-x: auto; /* Memunculkan horizontal scrollbar jika konten berlebihan */
+    white-space: nowrap; /* Mencegah pemutusan baris */
+  }
+
+
+
+  .card-scroll {
+    display: inline-block; /* Membuat konten card bergulir secara horizontal */
+    min-width: 20%; /* Mencegah card menjadi lebih kecil dari konten di dalamnya */
+  }
+
+  .card-text {
+    white-space: normal; /* Mengembalikan white-space normal */
+    text-overflow: clip; /* Menghilangkan ellipsis */
+  }
+
+  
+  
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 576px) {
+    .alas {
+        margin-top: 20px;
+    }
+
+    .alas .item1{
+        width: 350px;
+        height: 662px;
+        flex-shrink: 0;
+        margin-top: 0px;
+        margin-left: -30px;
+    }
+
+    .alas .item1 .desain .img {
+        width: 100px;
+        height: 100px;
+        position:absolute;
+        left: 130px;
+        top: 90px;
+    }
+
+    .alas .item1 .desain .isi {
+        width: 350px;
+        height: 250px;
+        padding-top: 100px;
+        padding-left: 10px;
+        border-radius: 50px;
+        margin-top: 0px;
+        background: #0060FF;
+        box-shadow: 0px 0.5985091924667358px 5.32008171081543px 0px rgba(0, 0, 0, 0.06), 0px 2.010267734527588px 17.869047164916992px 0px rgba(0, 0, 0, 0.09), 0px 9px 80px 0px rgba(0, 0, 0, 0.15);
+    }
+
+    .alas .item1 .desain .isi .selogan1 {
+        color: #FFF;
+        font-family: 'Alfa Slab One';
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 6px;
+    }
+
+    .alas .item1 .desain .isi .selogan2 {
+        color: #FFF;
+        font-family: 'Archivo', sans-serif;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 5px;
+    }
+    
+    .alas .item1 .content  {
+        padding-left: 30px;
+    }
+    .alas .item1 .content .selamat {
+        margin-top: 20px;
+        color: #F1901D;
+        font-family: 'Dosis';
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+        letter-spacing: 2.5px;
+        margin-bottom: 5px;
+    }
+
+    .alas .item1 .content .datang {
+        color: #000;
+    }
+
+    .alas .item1 .content .motivasi {
+        color: #000;
+        text-align: justify;
+        font-family: 'Dosis', sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-bottom: 40px;
+    }
+
+    .alas .item1 .content .selogan {
+        color: #000;
+        font-family: 'Dosis', sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .alas .item1 .content .salam {
+        color: #000;
+        font-family: 'Dosis', sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-top: -10px; 
+    }
+
+    .alas .item1 .content .botton {
+        color: #000;
+        font-family: 'Inter', sans-serif;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 1.1px;
+        margin-top: 40px;
+        border-radius: 50px;
+        background: #9ADFD5;
+        padding: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border: none;
+        
+
+    }
+
+
+    .item2 {
+        margin-top: 60px;
+        position: relative;
+    }
+
+    .item2 .featured {
+        color: #16A34A;
+        font-family: Dosis;
+        font-size: 45px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 90px;
+    }
+    
+    .item2 .featured::before {
+        content: "";
+        position: absolute;
+        width: 198.003px;
+        height: 6px;
+        background: #16A34A;
+        left: 55px;
+        top: 120px;
+    }
+
+    .item2 .featured span{
+        color: black;
+    }
+
+    .item2 .row{
+        margin-left: -35px;
+    }
+
+    .item2 .card{
+        width: 324px;
+        height: 269px;  
+        border: none;
+        box-shadow: 0px 6.650102138519287px 5.32008171081543px 0px rgba(0, 0, 0, 0.03), 0px 22.3363094329834px 17.869047164916992px 0px rgba(0, 0, 0, 0.04), 0px 100px 80px 0px rgba(0, 0, 0, 0.07);
+        border-radius: 30px;
+        margin-top: 20px;
+    }
+
+    .item2  img{ 
+        width: 108px;
+        height: 101px;
+        flex-shrink: 0;
+    }
+    .item2 .gambar {
+        display: flex;
+        justify-content: center;
+    }
+
+    .item3 {
+        margin-top: 100px;
+    }
+
+    .item3 .Latest {
+        color: #000;
+        font-family: Dosis;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 30px;
+    }
+
+    .item3 span {
+        color: #F1901D;
+    }
+
+    .item3 .card{
+        border: none;
+    }
+
+    .item3 img {
+        width: 155.475px;
+        height: 230.425px;
+        flex-shrink: 0;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+    
+    .item3 .gambar {
+        display: flex;
+        justify-content: center;
+    }
+
+    .item3 h5 {
+        color: #000;
+        font-family: Dosis;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .item3 h1 {
+        color: #000;
+        font-family: Dosis;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 30px;
+    }
+
+    .item3 p {
+        color: #000;
+        font-family: Dosis;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .item3 .card-body img {
+        width: 12px;
+        height: 12px;
+        flex-shrink: 0;
+        margin-right: 5px;
+    }
+
+    .item3 .bacground {
+        position: relative;
+        margin-right: 30px;
+    }
+
+    .item3 .card {
+        background-color: transparent;
+    }
+
+    .item3 .bacground::before {
+        position: absolute;
+        content: "";
+        top: 80px;
+        width: 174px;
+        height: 265.113px;
+        flex-shrink: 0;
+        border-radius: 50px 50px 10px 10px;
+        background: #F6F3EF;
+        box-shadow: 0px 3.724057197570801px 5.32008171081543px 0px rgba(0, 0, 0, 0.03), 0px 12.508333206176758px 17.869047164916992px 0px rgba(0, 0, 0, 0.04), 0px 56px 80px 0px rgba(0, 0, 0, 0.07);
+    }
+}
