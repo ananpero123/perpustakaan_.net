@@ -1,6 +1,9 @@
-@media only screen and (max-width: 1600px) {
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;600;700&family=Inter:wght@400;600;700&display=swap');
 
+@media only screen and (max-width: 1600px) {
     .sign {
+        display: flex;
+        justify-content: flex-end;
         margin-top: 47px;
         color: #FFF;
         font-family: Inter;
@@ -16,15 +19,15 @@
 
     .sign::before {
         content: "";
-        width: 381px;
+        width: 331px;
         height: 66px;
         flex-shrink: 0;
-        border-radius: 0 50px 50px 0;
+        border-radius: 50px 0px 0px 50px;
         background: #214055;
         position: absolute;
         z-index: -1;
         top: 32px;
-        left: 0;
+        right: 0;
         
     }
 
@@ -82,21 +85,8 @@
         font-weight: 400;
         line-height: normal;
     }
-
-    .img-responsive {
-        height: 100vh;
-        width: 110vh;
-        border-radius: 50% 0 0 50%;
-        position: absolute;
-        right: 0;
-        z-index: -1;
-    }
-    
-    .username {
-        margin-top: 170px;
-        margin-left: 100px;
-    }
 }
+
 
 
 img{
@@ -104,13 +94,11 @@ img{
 }
 
 
-
 .img-responsive {
+    max-width: 100%;
     height: 100vh;
-    border-radius: 50% 0 0 50%;
-    position: absolute;
-    right: 0;
-    z-index: -1;
+    object-fit: cover;
+    border-radius: 0 50% 50% 0;
 }
 
 .row {
@@ -123,31 +111,6 @@ img{
     img {
         position: absolute;
         z-index: -2;
-    }
-
-    .sign::before {
-        content: "";
-        width: 341px;
-        height: 66px;
-        flex-shrink: 0;
-        border-radius: 0 50px 50px 0;
-        background: #214055;
-        position: absolute;
-        z-index: -1;
-        top: 32px;
-        left: 0;
-        
-    }
-
-    .container h5 {
-        text-align: right;
-        margin: 0; /* Hapus margin default pada <p> */
-        color: #ffffff;
-        font-family: Dosis;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
     }
 
     input {
@@ -172,20 +135,30 @@ img{
     }
 
     .img-responsive {
+        max-width: 100%;
         height: 100vh;
-        width: 110vh;
-        border-radius: 50% 0 0 50%;
-        position: absolute;
-        right: 0;
-        z-index: -2;
+        object-fit: cover;
+        border-radius: 0 30% 30% 0;
     }
 
-    .item1 {
-        position: absolute;
-    }
+}
 
-    .username {
-        margin-top: 70px;
-        margin-left: 50px;
+.a {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: block;
+    z-index: 9999;
+  }
+
+  svg {
+    width: 41px;
+    height: 40px;
+  }
+
+  @media (max-width: 768px) {
+    .a {
+      top: 10px;
+      left: 10px;
     }
-}   
+  }

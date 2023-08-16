@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;600;700&family=Inter:wght@400;600;700&display=swap');
+a {
+    text-decoration: none;
+}
 @media only screen and (max-width: 1600px) {
     .bacground1 {
         top: 0;
         position: absolute;
-        width: 98.826vw;
+        width: 98.7vw;
         height: 230px;
         flex-shrink: 0;
         background: #E5F8FF;

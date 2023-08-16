@@ -12,6 +12,13 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { SaveBookComponent } from './libraryku/save-book/save-book.component';
 import { AdminComponent } from './admin/admin.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { AllUsersComponent } from './admin/all-users/all-users.component';
+import { BooksComponent } from './admin/books/books.component';
+import { EditComponent } from './admin/edit/edit.component';
+import { EditBooksComponent } from './admin/edit-books/edit-books.component';
+import { AddBooksComponent } from './admin/add-books/add-books.component';
+import { MyOrdersComponent } from './admin/my-orders/my-orders.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +31,14 @@ import { AdminComponent } from './admin/admin.component';
     LoginComponent,
     RegisterComponent,
     SaveBookComponent,
-    AdminComponent
+    AdminComponent,
+    DashboardComponent,
+    AllUsersComponent,
+    BooksComponent,
+    EditComponent,
+    EditBooksComponent,
+    AddBooksComponent,
+    MyOrdersComponent
   ],
   imports: [
     BrowserModule,

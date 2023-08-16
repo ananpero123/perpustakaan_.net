@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;600;700&family=Inter:wght@400;600;700&display=swap');
+
+.alas {
+    padding-top: 40px;
+    padding-left: 40px;
+    height: 60vh;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 0.24905309081077576px 2.2138051986694336px 0px rgba(0, 0, 0, 0.02), 0px 0.5985091924667358px 5.32008171081543px 0px rgba(0, 0, 0, 0.03), 0px 1.1269396543502808px 10.017241477966309px 0px rgba(0, 0, 0, 0.04), 0px 2.010267734527588px 17.869047164916992px 0px rgba(0, 0, 0, 0.04), 0px 3.7599847316741943px 33.422088623046875px 0px rgba(0, 0, 0, 0.05), 0px 9px 80px 0px rgba(0, 0, 0, 0.07);
+    color: #000;
+    font-family: Dosis;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.4px;
+}
+
+@media only screen and (max-width: 576px) {
+    .alas {
+        font-size: 18px;
+    }
+}
