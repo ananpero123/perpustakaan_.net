@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;600;700&family=Inter:wght@400;600;700&display=swap');
+@media only screen and (max-width: 1600px) {
+    .gambar12 {
+        top: 0;
+        content: "";
+        position: fixed;
+        width: 100vw;
+        height: 140px;
+        flex-shrink: 0;
+        z-index: 11;
+        background: #FFF;
+        box-shadow: 0px 1.222775936126709px 3.623039960861206px 0px rgba(0, 0, 0, 0.02), 0px 3.380819082260132px 10.017241477966309px 0px rgba(0, 0, 0, 0.04), 0px 8.13970947265625px 24.117658615112305px 0px rgba(0, 0, 0, 0.05), 0px 27px 80px 0px rgba(0, 0, 0, 0.07);
+    }
+    .dw1 .item1 {
+        display: flex;
+        flex-direction: row;
+    }
+    .dw1 .item1 img {
+        width: 42px;
+        height: 42px;
+        flex-shrink: 0;
+        border-radius: 42px;
+    }
+    .dw1 .item1 .name h4 {
+        color: #000;
+        font-family: Inter;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    .dw1 .item1 .name h5 {
+        color: #7D8E87;
+        font-family: Inter;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    .dw1 button {
+        width: 30px;
+        height: 29.159px;
+        flex-shrink: 0;
+        background-color: transparent;
+        border: none;
+    }
+    .dw2 .item2 img {
+        width: 42px;
+        height: 42px;
+        flex-shrink: 0;
+        border-radius: 42px;
+    }
+    .dw2 .username {
+        display: flex;
+        flex-direction: row;
+    }
+    .dw1 svg {}
+    .dw2 .username svg {
+        width: 20px;
+        height: 19.439px;
+        flex-shrink: 0;
+        margin-top: 7px;
+    }
+    .dw2 .img {
+        width: 35px;
+        height: 34px;
+        flex-shrink: 0;
+        border-radius: 42px;
+    }
+    .dw2 .item2 h5 {
+        color: #000;
+        font-family: Dosis;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    .dw2 h3 {
+        margin-left: 3px;
+        margin-top: 9px;
+        color: #000;
+        font-family: Dosis;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    .dw2 .item2 .user h4 {
+        color: #000;
+        font-family: Inter;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    .dw2 .item2 .user h5 {
+        color: #7D8E87;
+        font-family: Inter;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    .dw2 button {
+        width: 30px;
+        height: 29.159px;
+        flex-shrink: 0;
+        background-color: transparent;
+        border: none;
+    }
+    .conten_list {
+        margin-top: 30px;
+        width: 258px;
+        height: 78vh;
+        flex-shrink: 0;
+        background: #FFF;
+        box-shadow: 0px 3.0819032192230225px 1.853776454925537px 0px rgba(0, 0, 0, 0.02), 0px 7.165666103363037px 4.31017541885376px 0px rgba(0, 0, 0, 0.03), 0px 12.867876052856445px 7.740076065063477px 0px rgba(0, 0, 0, 0.04), 0px 21.35590934753418px 12.845659255981445px 0px rgba(0, 0, 0, 0.04), 0px 35.18313980102539px 21.162790298461914px 0px rgba(0, 0, 0, 0.05), 0px 61.48992919921875px 36.98642349243164px 0px rgba(0, 0, 0, 0.06), 0px 133px 80px 0px rgba(0, 0, 0, 0.08);
+        padding-top: 25px;
+        padding-left: 25px;
+    }
+    .conten_list .list a {
+        color: #000;
+        font-family: Inter;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        text-decoration: none;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+    .conten {
+        position: relative;
+        margin-top: 90px;
+        margin-left: 297px;
+        flex-shrink: 0;
+        border-radius: 10px;
+    }
+    .h5 a {
+        color: #000;
+        font-family: Dosis;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+}
+
+.fix {
+    position: fixed;
+}
+
+@media only screen and (max-width: 576px) {
+    .dw2 {
+        margin-right: 100px;
+        margin-left: 20px;
+    }
+    .conten_list {
+        margin-top: 30px;
+        width: 100px;
+        height: 79.5vh;
+        flex-shrink: 0;
+        background: #FFF;
+        box-shadow: 0px 3.0819032192230225px 1.853776454925537px 0px rgba(0, 0, 0, 0.02), 0px 7.165666103363037px 4.31017541885376px 0px rgba(0, 0, 0, 0.03), 0px 12.867876052856445px 7.740076065063477px 0px rgba(0, 0, 0, 0.04), 0px 21.35590934753418px 12.845659255981445px 0px rgba(0, 0, 0, 0.04), 0px 35.18313980102539px 21.162790298461914px 0px rgba(0, 0, 0, 0.05), 0px 61.48992919921875px 36.98642349243164px 0px rgba(0, 0, 0, 0.06), 0px 133px 80px 0px rgba(0, 0, 0, 0.08);
+        padding-top: 25px;
+        padding-left: 25px;
+    }
+    .conten_list .list a {
+        color: #000;
+        font-family: Inter;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 500;
+        text-decoration: none;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+    .conten {
+        position: relative;
+        margin-top: 90px;
+        margin-left: 150px;
+        flex-shrink: 0;
+    }
+}

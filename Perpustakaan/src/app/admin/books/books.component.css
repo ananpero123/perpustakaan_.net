@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;600;700&family=Inter:wght@400;600;700&display=swap');
+.table tr {
+    border-bottom: 2px solid #6020F0;
+}
+
+.table .center1 th {
+    background: #6020F0;
+    color: aliceblue;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.table .center1 .th1 {
+    background: #6020F0;
+    border-radius: 10px 0 0 0;
+}
+
+.table .center1 .th2 {
+    background: #6020F0;
+    border-radius: 0 10px 0 0;
+}
+
+tbody {
+    font-family: Dosis;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+h1 {
+    color: #382970;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.modal .model_book h5 {
+    color: #000;
+    font-family: Dosis;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.button12 {
+    width: 147px;
+    height: 43px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #63E3D1;
+    color: #000;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.32px;
+    border: none;
+}
+
+.delete_or_edit {
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: #21F636;
+    color: #FFF;
+    font-family: Dosis;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.delete_or_edit1 {
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: red;
+    color: #FFF;
+    font-family: Dosis;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.btn1 {
+    color: #FFF;
+    font-family: Dosis;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: #21F636;
+}
+
+.btn2 {
+    color: #FFF;
+    font-family: Dosis;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: red;
+}

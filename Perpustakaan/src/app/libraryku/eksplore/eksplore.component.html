@@ -1,0 +1,72 @@
+<div class="bacground1"></div>
+<div class="container item1">
+    <div class="row">
+        <div class="navbar my-lg-4 my-md-3 my-2 ">
+            <div class="container-fluid">
+                <div class="d-flex search abs" role="search">
+                    <input class="form-control" type="text" placeholder="Search" [(ngModel)]="searchTerm" (input)="onSearch()" aria-label="Search">
+                    <button class="btn btn-outline-success button" (click)="onSearch()" type="submit">Search</button>
+                    <h2 class="ms-lg-5 ms-md-4 ms-3 me-lg-3 me-md-2 me-2 mt-3">Category</h2>
+                    <select [(ngModel)]="selectedCategory" (change)="filterByCategory()" class="select mt-2" name="select" id="bhs">
+                  <option value="All">All</option>
+                  <option *ngFor="let category of categories" [value]="category.category">{{category.category}}</option>
+
+              </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container" *ngIf="selectedCategory === 'All' && getLatestBooks().length > 0">
+    <div class="row align-items-start ">
+        <div class="col ">
+            <div class="container-lg item3 ">
+                <h3 class="Latest ">Latest</h3>
+                <div class="scrollable-container ">
+                    <div class="bacground card-scroll col-lg-2 col-md-12 " *ngFor="let book of getLatestBooks() ">
+                        <a [routerLink]="[ '../save_book',book.id] ">
+                            <div class="card ">
+                                <div class="gambar ">
+                                    <img src="{{book.foto}} " alt=" ">
+                                </div>
+                                <div class="card-body ">
+                                    <h5>{{book.author}}</h5>
+                                    <h1>{{book.title}}</h1>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container" *ngFor="let category of categories">
+    <div class="row align-items-start" *ngIf="(selectedCategory === 'All' && getBooksInCategory(category.id).length > 0) || selectedCategory === category.category">
+        <div class="col">
+            <div class="container-lg item3">
+                <h3 class="Latest">{{ category.category }}</h3>
+                <div class="scrollable-container">
+                    <div class="bacground card-scroll col-lg-2 col-md-12 " *ngFor="let book of getBooksInCategory(category.id) ">
+                        <a [routerLink]="[ '../save_book',book.id] ">
+                            <div class="card ">
+                                <div class="gambar ">
+                                    <img src="{{book.foto}} " alt=" ">
+                                </div>
+                                <div class="card-body ">
+                                    <h5>{{book.author}}</h5>
+                                    <h1>{{book.title}}</h1>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>

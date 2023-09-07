@@ -1,0 +1,91 @@
+<h1 class="h1 my-lg-4 my-md-3 my-3">Add Books to Library</h1>
+<div class="alas p-4">
+  <div class="col-lg-5 col-md-12 col-12 edit">
+    <a href="" style="cursor: pointer" routerLink="../books">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="29"
+        height="29"
+        viewBox="0 0 29 29"
+        fill="none"
+        style="cursor: pointer"
+        routerLink="../books"
+      >
+        <!-- SVG code here -->
+      </svg>
+      Back
+    </a>
+  </div>
+  <h2 class="my-4 text-center">Input Form for Adding Book Data</h2>
+  <div class="row">
+    <div class="col-lg-5 col-md-12 col-12 edit1">
+      <div class="row selection1" style="display: flex; flex-direction: column">
+        <div>
+          <h5>Book Title</h5>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter something..."
+            [(ngModel)]="bookdata.title"
+          />
+        </div>
+        <div class="mt-lg-3 mt-md-2 mt-2">
+          <h5>Publisher</h5>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter something..."
+            [(ngModel)]="bookdata.namapenerbit"
+          />
+        </div>
+        <div class="mt-lg-3 mt-md-2 mt-2">
+          <h5>ISBN</h5>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter something..."
+            [(ngModel)]="bookdata.isbn"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-5 col-md-12 col-12 edit2">
+      <div class="row selection1" style="display: flex; flex-direction: column">
+        <div>
+          <h5>Author</h5>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter something..."
+            [(ngModel)]="bookdata.author"
+          />
+        </div>
+
+        <div>
+          <h5>Category</h5>
+          <select class="form-control" [(ngModel)]="bookdata.categoryId">
+            <option *ngFor="let category of Category" [value]="category.id">
+              {{ category.category }}
+            </option>
+          </select>
+        </div>
+
+        <div class="mt-lg-3 mt-md-2 mt-2">
+          <h5>Select Cover</h5>
+          <input
+            type="file"
+            class="form-control"
+            placeholder="Enter something..."
+            (change)="onFileChange($event)"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-2 col-md-12 col-12 p-4 edit3">
+      <div class="row selection1" style="display: flex; flex-direction: column">
+        <img *ngIf="bookdata.foto" [src]="bookdata.foto" alt="" />
+        <button class="py-2" (click)="saveBook()">SAVE EDIT</button>
+      </div>
+    </div>
+  </div>
+</div>

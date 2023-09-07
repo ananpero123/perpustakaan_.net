@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;600;700&family=Inter:wght@400;600;700&display=swap');
+.book_loan {
+    color: #382970;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+img {
+    width: 190px;
+}
+
+.alas {
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 0.24905309081077576px 2.2138051986694336px 0px rgba(0, 0, 0, 0.02), 0px 0.5985091924667358px 5.32008171081543px 0px rgba(0, 0, 0, 0.03), 0px 1.1269396543502808px 10.017241477966309px 0px rgba(0, 0, 0, 0.04), 0px 2.010267734527588px 17.869047164916992px 0px rgba(0, 0, 0, 0.04), 0px 3.7599847316741943px 33.422088623046875px 0px rgba(0, 0, 0, 0.05), 0px 9px 80px 0px rgba(0, 0, 0, 0.07);
+}
+
+.h1 {
+    width: 103px;
+    height: 24px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: #FFE973;
+    color: #000;
+    font-family: Dosis;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    /* 21px */
+}
+
+.selection1 h5 {
+    align-self: stretch;
+    color: #2C2C2E;
+    font-family: Dosis;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    /* 22.5px */
+}
+
+.selection1 input {
+    display: flex;
+    padding: 5px 6px;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    border-radius: 8px;
+    border: 2px solid #5470FF;
+    background: #FFF;
+    color: #000;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 160% */
+}
+
+.custom-file-upload {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.custom-input-file {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+.custom-file-label {
+    display: inline-block;
+    background-color: #3498db;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.custom-file-label:hover {
+    background-color: #2980b9;
+}
+
+button {
+    width: 135px;
+    height: 41px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: #5470FF;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    /* 160% */
+    border: none;
+}
+
+@media only screen and (max-width: 576px) {
+    img {
+        width: 100px;
+    }
+}

@@ -1,0 +1,58 @@
+<h1 class="my-lg-4 my-md-4 my-3 book_loan">Edit Admin</h1>
+<div class="alas">
+    <div class="row p-4">
+        <div class="col-lg-4 col-md-12 col-12 text-center mt-5">
+            <img *ngIf="user?.Image" [src]="user?.Image" alt="" class="mb-2">
+
+            <div class="custom-file-upload" style="cursor:pointer;">
+                <label for="fileInput" class="custom-file-label">Pilih File</label>
+                <input type="file" (change)="onFileChange($event)" id="fileInput" class="custom-input-file" />
+            </div>
+        </div>
+
+
+
+        <div class="col-lg-4 col-md-12 col-12 my-lg-5">
+            <div class="row selection1" style="display: flex; flex-direction: column;">
+                <div>
+                    <h5>First Name</h5>
+                    <input type="text" class="form-control" placeholder="Enter something..." [(ngModel)]="user.Firstname">
+                </div>
+                <div class="mt-lg-3 mt-md-2 mt-2">
+                    <h5>Last Name</h5>
+                    <input type="text" class="form-control" placeholder="Enter something..." [(ngModel)]="user.Lastname">
+                </div>
+                <div class="mt-lg-3 mt-md-2 mt-2">
+                    <h5>Username</h5>
+                    <input type="text" class="form-control" placeholder="Enter something..." [(ngModel)]="user.Username">
+                </div>
+                <div class="mt-lg-3 mt-md-2 mt-2">
+                    <h5>Email</h5>
+                    <input type="text" class="form-control" placeholder="Enter something..." [(ngModel)]="user.Email">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-lg-4 col-md-12 col-12 my-lg-5">
+            <div class="row selection1" style="display: flex; flex-direction: column;">
+                <div>
+                    <h5>Address</h5>
+                    <input type="text" class="form-control " placeholder="Enter something..." [(ngModel)]="user.Address">
+                </div>
+                <div class="mt-lg-3 mt-md-2 mt-2">
+                    <h5>No Telp</h5>
+                    <input type="text" class="form-control " placeholder="Enter something... " [(ngModel)]="user.Mobile">
+                </div>
+                <div class="mt-lg-3 mt-md-2 mt-2">
+                    <h5>New Password</h5>
+                    <input type="text" class="form-control " placeholder="New Password?" [(ngModel)]="user.Password" required>
+                </div>
+                <div class=" mt-lg-4 mt-md-3 mt-2 ">
+                    <button (click)="updateUserInfo() " class="btn btn-primary ">Save Changes</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
