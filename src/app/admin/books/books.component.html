@@ -13,63 +13,67 @@
     </div>
     
 </div>
-<div class="table-responsive" >
+<div class="table-responsive">
     <table class="table">
-      <thead class="" >
+      <thead>
         <tr class="center1">
-          <th class="py-lg-3 th1" scope="col">Id</th>
+          <th class="py-lg-3 th1" scope="col">No</th>
           <th class="py-lg-3" scope="col">Book Title</th>
           <th class="py-lg-3" scope="col">Publisher</th>
           <th class="py-lg-3" scope="col">ISBN</th>
           <th class="py-lg-3" scope="col">Author</th>
           <th class="py-lg-3" scope="col">Category</th>
-          <th class="py-lg-3" scope="col">Action</th>
+          <th class="py-lg-3 th2" scope="col">Action</th>
         </tr>
       </thead>
-      <tbody >
-        <tr>
-          <th class="py-lg-3" scope="row">1</th>
-          <td class="py-lg-3">Mark</td>
-          <td class="py-lg-3">Otto</td>
-          <td class="py-lg-3">@mdo</td>
-          <td class="py-lg-3">Mark</td>
-          <td class="py-lg-3">Otto</td>
+      <tbody>
+        <tr *ngFor="let book of bookData | async; let i = index">
+          <td class="py-lg-3" scope="row">{{ i + 1 }}</td>
+          <td class="py-lg-3">{{ book.title }}</td>
+          <td class="py-lg-3">{{ book.publisher }}</td>
+          <td class="py-lg-3">{{ book.isbn }}</td>
+          <td class="py-lg-3">{{ book.author }}</td>
+          <td class="py-lg-3">{{ book.category }}</td>
           <td class="py-lg-3" style="display: flex; flex-direction: row;">
 
-            <button routerLink="../edit_books"  style="border: none;" class="btn delete_or_edit me-lg-3 me-md-3 me-2">
+            <button [routerLink]="['../edit_books', book.id]" style="border: none;" class="btn delete_or_edit me-lg-3 me-md-3 me-2">
               Edit
-          </button>
+            </button>
+            
 
-            <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-                <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content" >
-                    <div class="modal-header" style="border: none;">
-                      <h1 class="modal-title fs-5" id="exampleModalToggleLabel"></h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body model_book" style="border: none; ">
-                      <h5 style="z-index: 100000;" class="text-center">Are you sure to delete?</h5>
-                      <div class="row my-lg-5 my-md-4 m-3">
-                          <div class="col-6 text-center">
-                              <button type="button" class="btn btn1 px-lg-5 px-md-4 px-3">YES</button>
-                          </div>
-                          <div class="col-6 text-center">
-                              <button type="button" class="btn btn2 px-lg-5 px-md-4 px-3">NO</button>
+            <div class="modal fade" [id]="'exampleModalToggle' + book.id" aria-hidden="true" [attr.aria-labelledby]="'exampleModalToggleLabel' + book.id" tabindex="-1">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header" style="border: none;">
+                          <h1 class="modal-title fs-5" id="exampleModalToggleLabel"></h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body model_book" style="border: none;">
+                          <h5 style="z-index: 100000;" class="text-center">Are you sure to delete?</h5>
+                          <div class="row my-lg-5 my-md-4 m-3">
+                              <div class="col-6 text-center">
+                                  <button type="button" class="btn btn1 px-lg-5 px-md-4 px-3" (click)="deleteBook(book.id)">YES</button>
+                              </div>
+                              <div class="col-6 text-center">
+                                  <button type="button" class="btn btn2 px-lg-5 px-md-4 px-3" data-bs-dismiss="modal">NO</button>
+                              </div>
                           </div>
                       </div>
-                    
-                    </div>
-                    
                   </div>
-                </div>
               </div>
-              <button style="border: none;" class="btn delete_or_edit1" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">
-                Delete
-            </button>
+          </div>
+          <button style="border: none;" class="btn delete_or_edit1" [attr.data-bs-target]="'#exampleModalToggle' + book.id" data-bs-toggle="modal">
+            Delete
+        </button>
+        
           </td>
 
         </tr>
       </tbody>
     </table>
   </div>
+
+  <div *ngIf="(bookData | async)?.length === 0">
+  No books available.
+</div>
   

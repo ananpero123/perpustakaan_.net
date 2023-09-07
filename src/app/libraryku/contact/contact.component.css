@@ -1,191 +1,290 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;600&family=Inter:wght@600;700;900&display=swap');
+/* @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@400;600&family=Inter:wght@600;700;900&display=swap"); */
 
 @media only screen and (max-width: 1600px) {
-    ul{
-        display: flex;
-        flex-direction: row;
+    ul {
+      display: flex;
+      flex-direction: row;
     }
-
-    ul li{
-        list-style: none;
+  
+    ul li {
+      list-style: none;
     }
-    
+  
     .alas {
-        background-color: #132531;
-        border-radius: 50px 50px 0 0;
-        font-family: 'Inter', sans-serif;
+      background-color: #132531;
+      border-radius: 50px 50px 0 0;
+      font-family: "Inter", sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
     }
-
+  
     .item1 {
-        
-        padding-top: 100px;
-        margin-left: 90px;
+      padding-top: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 350px;
     }
-
+  
     .item1 h3 {
-        color: #FFFFFF;
+      color: #ffffff;
+      font-size: 48px;
     }
-
-    .item1 h3 b{
-        font-size: 48px;
+  
+    .item1 h3 span {
+      color: #f1901d;
     }
-
-    .item1 h3 b span{
-        color: #F1901D;
+  
+    .item1 p {
+      color: #f5f5f5;
+      font-size: 15px;
+      background-color: #9adfd5;
+      border-radius: 30px;
+      padding: 10px;
+      padding-left: 40px;
+      padding-right: 40px;
+      font-weight: bold;
     }
-
-    .item1 h3 .span{
-        color: #F5F5F5;
-        font-size: 15px;
-        margin-left: 300px;
-        background-color: #9ADFD5;
-        border-radius: 30px;
-        padding:10px;
-        padding-left: 40px;
-        padding-right: 40px;
-        font-weight: bold;
-        
-    }
-
+  
     .item2 {
-        margin-top: 85px;
-        color: #FFFFFF;
-        margin-top: 100px;
-        margin-left: 300px;
-        margin-bottom: 90px;
+      margin-top: 100px;
+      color: #ffffff;
+      margin-bottom: 90px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-
-    .item2 ul div h4 {
-        font-weight: bold;
-    }
-    
+  
     .item2 ul div {
-        margin-right: 200px;
+      margin-left: 40px;
+      margin-right: 80px;
     }
-
-    .item2 ul div .span{
-        color: #FFF;
-        font-size: 10px;
-        font-style: normal;
-        font-family: 'Dosis', sans-serif;
-        font-weight: 400;
-        line-height: normal;
+  
+    .item2 ul div h4 {
+      font-weight: bold;
     }
-
-
-
-    .item3  {
-        background-color: #214055;
-        flex-shrink: 0;
-        display: flex;
-        justify-content: center;
+  
+    .item2 ul div .span {
+      color: #fff;
+      font-size: 20px;
+      font-style: normal;
+      font-family: "Dosis", sans-serif;
+      font-weight: 400;
+      line-height: normal;
     }
-
-    .item3  h5{
-        padding-top: 10px;
-        color: #FFF;
-        font-family: Inter;
-        font-size: 15px;
-        font-style: normal;
-        line-height: normal;
+  
+    .item3 {
+      background-color: #214055;
+      width: 100%;
+      display: flex;
+      justify-content: center;
     }
-
-
-    
-}
-
-@media only screen and (max-width: 576px) {
-    ul{
-        display:contents;
-        flex-direction:unset;
+  
+    .item3 h5 {
+      padding-top: 10px;
+      color: #fff;
+      font-family: Inter;
+      font-size: 15px;
+      font-style: normal;
+      line-height: normal;
     }
-
-    ul li{
-        list-style: none;
+  }
+  
+  @media only screen and (max-width: 840px) {
+    ul {
+      display: contents;
+      flex-direction: unset;
     }
-    
+  
+    ul li {
+      list-style: none;
+    }
+  
     .alas {
-        background-color: #132531;
-        border-radius: 50px 50px 0 0;
-        font-family: 'Inter', sans-serif;
+      background-color: #132531;
+      border-radius: 40px 40px 0 0;
+      font-family: "Inter", sans-serif;
+      overflow: hidden;
+      height: 695px;
     }
-
+  
     .item1 {
-        
-        padding-top: 40px;
-        margin-left: 15px;
+      padding-top: 80px;
+      flex-direction: column;
+      gap: 15px;
     }
-
+  
     .item1 h3 {
-        color: #FFFFFF;
-        display: flex;
-        flex-direction: column;
-        
+      color: #ffffff;
+      font-size: 38px;
     }
-
-    .item1 h3 b{
-        font-size: 28px;
+  
+    .item1 h3 span {
+      color: #f1901d;
     }
-
-    .item1 h3 b span{
-        color: #F1901D;
+  
+    .item1 p {
+      color: #f5f5f5;
+      font-size: 20px;
+      background-color: #9adfd5;
+      border-radius: 15px;
+      padding: 7px;
+      padding-left: 20px;
+      padding-right: 20px;
+      font-weight: bold;
+      text-align: center;
+      width: 600px;
     }
-
-    .item1 h3 .span{
-        color: #F5F5F5;
-        font-size: 16px;
-        margin-left:0px;
-        margin-top: 17px;
-        margin-right: 20px;
-        background-color: #9ADFD5;
-        border-radius: 10px;
-        padding:10px;
-        font-weight: bold;
-        
-    }
-
+  
     .item2 {
-        color: #FFFFFF;
-        margin-top: 60px;
-        margin-left: 15px;
-        margin-bottom: 40px;
+      flex-direction: column;
+      margin-top: 60px;
+      margin-bottom: 70px;
     }
-
+  
     .item2 ul div h4 {
-        font-weight: bold;
-        font-size: 20px;
-        margin-right: 20px;
+      font-weight: bold;
+      font-size: 24px;
     }
-    
+  
+    .item2 ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+    }
+  
     .item2 ul div {
-        margin-right: 0px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
-
-    .item2 ul div .span{
-        color: #FFF;
-        font-size: 12px;
-        font-style: normal;
-        font-family: 'Dosis', sans-serif;
-        font-weight: 400;
-        line-height: normal;
-        margin-bottom: 40px;
+  
+    .item2 ul div .span {
+      color: #fff;
+      font-size: 22px;
+      font-style: normal;
+      font-family: "Dosis", sans-serif;
+      font-weight: 400;
+      line-height: normal;
     }
-
-
-
-    .item3  {
-        background-color: #214055;
-        flex-shrink: 0;
-        display: flex;
-        justify-content: center;
+  
+    .item3 {
+      background-color: #214055;
+      display: flex;
+      justify-content: center;
     }
-
-    .item3  h5{
-        padding-top: 10px;
-        color: #FFF;
-        font-family: Inter;
-        font-size: 11px;
-        font-style: normal;
-        line-height: normal;
+  
+    .item3 h5 {
+      padding-top: 10px;
+      color: #fff;
+      font-family: Inter;
+      font-size: 11px;
+      font-style: normal;
+      line-height: normal;
     }
-}
+  }
+  
+  @media only screen and (max-width: 440px) {
+    ul {
+      display: contents;
+      flex-direction: unset;
+    }
+  
+    ul li {
+      list-style: none;
+    }
+  
+    .alas {
+      background-color: #132531;
+      border-radius: 40px 40px 0 0;
+      font-family: "Inter", sans-serif;
+      overflow: hidden;
+      height: 600px;
+    }
+  
+    .item1 {
+      padding-top: 40px;
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .item1 h3 {
+      color: #ffffff;
+      font-size: 38px;
+    }
+  
+    .item1 h3 span {
+      color: #f1901d;
+    }
+  
+    .item1 p {
+      color: #f5f5f5;
+      font-size: 15px;
+      background-color: #9adfd5;
+      border-radius: 15px;
+      padding: 7px;
+      padding-left: 10px;
+      padding-right: 10px;
+      font-weight: bold;
+      text-align: center;
+      width: 320px;
+    }
+  
+    .item2 {
+      flex-direction: column;
+      margin-top: 60px;
+      margin-bottom: 70px;
+    }
+  
+    .item2 ul div h4 {
+      font-weight: bold;
+      font-size: 20px;
+    }
+  
+    .item2 ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+    }
+  
+    .item2 ul div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .item2 ul div .span {
+      color: #fff;
+      font-size: 18px;
+      font-style: normal;
+      font-family: "Dosis", sans-serif;
+      font-weight: 400;
+      line-height: normal;
+    }
+  
+    .item3 {
+      background-color: #214055;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .item3 h5 {
+      padding-top: 10px;
+      color: #fff;
+      font-family: Inter;
+      font-size: 11px;
+      font-style: normal;
+      line-height: normal;
+    }
+  }
+  

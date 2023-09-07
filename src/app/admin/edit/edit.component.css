@@ -1,5 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;600;700&family=Inter:wght@400;600;700&display=swap');
 
+
+.loading-spinner {
+  border: 3px solid rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  border-top: 3px solid #3498db;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
 .book_loan {
     color: #382970;
     font-family: Inter;

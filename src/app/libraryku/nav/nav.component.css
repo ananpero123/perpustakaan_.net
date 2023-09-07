@@ -1,59 +1,121 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Inter:wght@600;700;900&display=swap');
+/* @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Inter:wght@600;700;900&display=swap"); */
 
 @media only screen and (max-width: 1600px) {
     nav {
-        border-radius: 0 0 50px 50px;
-        background-color: #132531;
-        font-family: 'Inter', sans-serif;
-        
+      border-radius: 0 0 50px 50px;
+      background-color: #132531;
+      font-family: "Inter", sans-serif;
     }
-
-    .navbar-brand{
-        margin-left: 70px;
-        margin-bottom: 10px;
-        color: #FFFFFF;
-        font-size: 30px;
-        font-weight: 900;
-        
+  
+    .navbar-brand {
+      margin-left: 70px;
+      margin-bottom: 10px;
+      color: #ffffff;
+      font-size: 30px;
+      font-weight: 900;
     }
-
-    a span{
-        color: #F1901D;
+  
+    a span {
+      color: #f1901d;
     }
-
+  
     nav .exporer a {
-        margin-right: 70px;
-        font-size: 17px;
-        color: #FFFFFF;
+      margin-right: 70px;
+      font-size: 17px;
+      color: #ffffff;
     }
-
+  
     .exporer .sign {
-        padding: 6px;
-        padding-left: 10px;
-        padding-right: 10px;
-        background-color: #FFFFFF;
-        border-radius: 20px;
+      padding: 6px;
+      padding-top: 8px;
+      padding-left: 20px;
+      padding-right: 20px;
+      background-color: #ffffff;
+      border-radius: 20px;
     }
-
-    .exporer .sign b{
-        color: #214055;
+  
+    .exporer .sign b {
+      color: #214055;
     }
-}
-
-
-@media only screen and (max-width: 576px) {
+  }
+  
+  @media only screen and (max-width: 820px) {
     nav {
-        border-radius: 0 0 50px 50px;
-        background-color: #132531;
+      border-radius: 0 0 50px 50px;
+      background-color: #132531;
     }
-    .navbar-brand{
-        margin-left: 20px;
-        margin-bottom: 10px;
-        color: #FFFFFF;
-        font-size: 30px;
+  
+    .navbar-brand {
+      margin-left: 30px;
+      margin-bottom: 10px;
+      color: #ffffff;
+      font-size: 30px;
     }
+  
     .button {
-        background-color: aliceblue;
-        margin-right: 20px;
+      background-color: aliceblue;
+      margin-right: 30px;
     }
-}
+  
+    .navbar-collapse {
+      margin-top: 15px;
+      margin-bottom: 30px;
+    }
+  
+    .navbar-nav {
+      padding-left: 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .navbar-nav a {
+      margin-bottom: 24px;
+    }
+  
+    .navbar-nav a b {
+      font-size: 24px;
+    }
+  }
+  
+  @media only screen and (max-width: 440px) {
+    nav {
+      border-radius: 0 0 50px 50px;
+      background-color: #132531;
+    }
+  
+    .navbar-brand {
+      margin-left: 20px;
+      margin-bottom: 10px;
+      color: #ffffff;
+      font-size: 30px;
+    }
+  
+    .button {
+      background-color: aliceblue;
+      margin-right: 20px;
+    }
+  
+    .navbar-collapse {
+      margin-top: 10px;
+      margin-bottom: 25px;
+    }
+  
+    .navbar-nav {
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+  
+    .navbar-nav a {
+      margin-bottom: 18px;
+    }
+  
+    .navbar-nav a b {
+      font-size: 18px;
+    }
+  }
+  

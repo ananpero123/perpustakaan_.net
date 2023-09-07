@@ -1,3 +1,5 @@
 <div class="alas">
-    Welcome to Admin Page
+    <ng-container *ngIf="user">
+        Welcome {{ user.firstName }} {{ user.lastName }}
+    </ng-container>
 </div>

@@ -1,8 +1,8 @@
 <div class="row">
     <a routerLink="/Libraryku" class="a" href="">
         <svg xmlns="http://www.w3.org/2000/svg" width="41" height="40" viewBox="0 0 41 40" fill="none">
-          <line x1="1.69156" y1="2.15918" x2="38.6916" y2="36.1592" stroke="white" stroke-width="5"/>
-          <line x1="38.7434" y1="1.79181" x2="1.74339" y2="37.7918" stroke="white" stroke-width="5"/>
+        <line x1="1.69156" y1="2.15918" x2="38.6916" y2="36.1592" stroke="white" stroke-width="5"/>
+        <line x1="38.7434" y1="1.79181" x2="1.74339" y2="37.7918" stroke="white" stroke-width="5"/>
         </svg>
     </a>
     <div class="col-lg-7 col-sm-12">
@@ -14,19 +14,18 @@
         </div>
         <div>
             <div class="group input-group mb-lg-3 mb-md-3 mb-2">
-                <input type="text" class="form-control" placeholder="First Name" aria-label="First Name">
-                <input type="text" class="form-control ms-lg-4 ms-md-3 ms-3" placeholder="Last Name" aria-label="Last Name">
+                <input type="text" class="form-control" placeholder="First Name" aria-label="First Name" [(ngModel)]="firstName">
+                <input type="text" class="form-control ms-lg-4 ms-md-3 ms-3" placeholder="Last Name" aria-label="Last Name" [(ngModel)]="lastName">
             </div>
-            <input type="text" class="form-control mb-lg-3 mb-md-3 mb-2" placeholder="Username" aria-label="Username">
-            <input type="text" class="form-control mb-lg-3 mb-md-3 mb-2" placeholder="Email" aria-label="Email">
-            <input type="text" class="form-control mb-lg-3 mb-md-3 mb-2" placeholder="Address" aria-label="Address">
-            <input type="text" class="form-control mb-lg-3 mb-md-3 mb-2" placeholder="No Telp" aria-label="No Telp">
-            <input type="text" class="form-control mb-lg-3 mb-md-3 mb-2" placeholder="Password" aria-label="Password">
+            <input type="text" class="form-control mb-lg-3 mb-md-3 mb-2" placeholder="Username" aria-label="Username" [(ngModel)]="username">
+            <input type="text" class="form-control mb-lg-3 mb-md-3 mb-2" placeholder="Email" aria-label="Email" [(ngModel)]="email">
+            <input type="text" class="form-control mb-lg-3 mb-md-3 mb-2" placeholder="Address" aria-label="Address" [(ngModel)]="address">
+            <input type="text" class="form-control mb-lg-3 mb-md-3 mb-2" placeholder="Phone" aria-label="Phone" [(ngModel)]="phone">
+            <input type="password" class="form-control mb-lg-3 mb-md-3 mb-2" placeholder="Password" aria-label="Password" [(ngModel)]="password">
         </div>
         <div class="container">
-                <button type="bottom-right" class="btn btn-primary mt-lg-3 mt-md-4 mt-4">SUBMIT</button>
+                <button type="button" class="btn btn-primary mt-lg-3 mt-md-4 mt-4" (click)="register()">SUBMIT</button>
                 <h5 class="col-12 mt-lg-3 mt-md-2 mt-2">Already have an account ? <a routerLink="/login">Login</a></h5>
         </div>
     </div>
 </div>
-

@@ -1,29 +1,38 @@
-<h1 class="my-lg-4 my-md-4 my-3">Book Loan List</h1>
-<div class="table-responsive" >
-    <table class="table">
-      <thead class="" >
-        <tr class="center1">
-          <th class="py-lg-3 th1" scope="col">Book Title</th>
-          <th class="py-lg-3" scope="col">Publisher</th>
-          <th class="py-lg-3" scope="col">ISBN</th>
-          <th class="py-lg-3" scope="col">Author</th>
-          <th class="py-lg-3" scope="col">Category</th>
-          <th class="py-lg-3" scope="col">Status/Ket</th>
-        </tr>
-      </thead>
-      <tbody >
-        <tr>
-          <th class="py-lg-3" scope="row">Ketapang Merah Udin</th>
-          <td class="py-lg-3">Kementerian Pendidikan, 
-            Kebudayaan, Riset, dan Teknologi</td>
-          <td class="py-lg-3">978-602-244-939-3</td>
-          <td class="py-lg-3">Laksmi Manohara, Aira 
-            Rumi</td>
-          <td class="py-lg-3">Novel</td>
-          <td class="py-lg-3 padding">Pending</td>
+<h1 class="my-lg-4 my-md-4 my-3">My Orders</h1>
+<div class="table-responsive">
+  <table class="table">
+    <thead class="">
+      <tr class="center1">
+        <th class="py-lg-3 th1" scope="col">Book Title</th>
+        <th class="py-lg-3" scope="col">Publisher</th>
+        <th class="py-lg-3" scope="col">ISBN</th>
+        <th class="py-lg-3" scope="col">Author</th>
+        <th class="py-lg-3" scope="col">Category</th>
+        <th class="py-lg-3" scope="col">Time</th>
 
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  
+        <th class="py-lg-3 th2" scope="col">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngIf="userOrders.length === 0">
+        <td colspan="7" class="text-center">You haven't ordered any books.</td>
+      </tr>
+      <tr *ngFor="let order of userOrders">
+        <th class="py-lg-3" scope="row">{{ order.bookTitle }}</th>
+        <td class="py-lg-3">{{ order.publisher }}</td>
+        <td class="py-lg-3">{{ order.isbn }}</td>
+        <td class="py-lg-3">{{ order.author }}</td>
+        <td class="py-lg-3">{{ order.category }}</td>
+        <td class="py-lg-3">
+          {{ order.daysRemaining <= 0 ? 'Expired' : order.daysRemaining }}
+        </td>
+        <td class="py-lg-3 padding">
+          <h1 *ngIf="order.status == 'pending' || order.status == 'returned'">{{ order.status }}</h1>
+          <a [routerLink]="['../../pdf-viewer', order.bookPdf]" *ngIf="order.status == 'approve'">Read Book</a>        </td>
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
+
+

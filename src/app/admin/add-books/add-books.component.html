@@ -13,15 +13,15 @@
             <div class="row selection1" style="display: flex; flex-direction: column;">
                 <div >
                     <h5>Book Title</h5>
-                    <input type="text" class="form-control" placeholder="Enter something...">
+                    <input type="text" class="form-control" placeholder="Enter something..." name="bookTitle" [(ngModel)]="bookData.title">
                 </div>
                 <div class="mt-lg-3 mt-md-2 mt-2">
                     <h5>Publisher</h5>
-                    <input type="text" class="form-control" placeholder="Enter something...">
+                    <input type="text" class="form-control" placeholder="Enter something..." name="publisher"[(ngModel)]="bookData.publisher">
                 </div>
                 <div class="mt-lg-3 mt-md-2 mt-2">
                     <h5>ISBN</h5>
-                    <input type="text" class="form-control" placeholder="Enter something...">
+                    <input type="text" class="form-control" placeholder="Enter something..." name="isb"[(ngModel)]="bookData.isbn">
                 </div>
             </div>
         </div>
@@ -29,22 +29,35 @@
             <div class="row selection1" style="display: flex; flex-direction: column;">
                 <div >
                     <h5>Author</h5>
-                    <input type="text" class="form-control" placeholder="Enter something...">
+                    <input type="text" class="form-control" placeholder="Enter something..." name="author"[(ngModel)]="bookData.author">
                 </div>
                 <div class="mt-lg-3 mt-md-2 mt-2">
                     <h5>Category</h5>
-                    <input type="text" class="form-control" placeholder="Enter something...">
+                    <select class="form-control" name="category" [(ngModel)]="bookData.category">
+                        <option value="" disabled selected>-</option>
+                        <option value="Novel">Novel</option>
+                        <option value="Comic">Comic</option>
+                        <option value="Lesson">Lesson</option>
+                    </select>
                 </div>
                 <div class="mt-lg-3 mt-md-2 mt-2">
-                    <h5>Select Cover</h5>
-                    <input type="file" class="form-control" placeholder="Enter something...">
+                    <h5>Book Cover</h5>
+                    <input type="file" class="form-control" placeholder="Enter something..." name="coverImage" (change)="onFileChange($event)">
+                </div>
+                <div class="mt-lg-3 mt-md-2 mt-2">
+                    <h5>Select Book Pdf</h5>
+                    <input type="file" class="form-control" placeholder="Enter something..." name="bookPdf" (change)="onPdfFileChange($event)">
                 </div>
             </div>
         </div>
-        <div class="col-lg-2 col-md-12 col-12  p-4 edit3">
+        <div class="col-lg-2 col-md-12 col-12 p-4 edit3">
             <div class="row selection1" style="display: flex; flex-direction: column;">
-                <img src="https://s3-alpha-sig.figma.com/img/56f9/6eb5/b3a1915c2443684127041501e0394ae3?Expires=1693180800&Signature=meO9DBJOxV9wBU83mXPcfynOfBxJZMxvlyZ9ifafG6J0Fr8V9rfSJnv9vNiQFRyMOQtTGQurKQpEmw1CLyrs2LmQ8Mwl7ZM4o7t~9PzX6GA6h8xVj1osN19eBCAMtziiAT-5NhUrOVzHFLxzm5dNxFwxoNGbVIYZQlyehGIsLqgcTTc6rmwsjR6RbeFN4EAV56r-oJCfVPtCoao5KFv8BQu5EaErzmdEpD1A5yc4MHBNxSgdHEckBpFtgGl4hDahJfckQcJPK1bvRKy5u8wJG72N9doIexf5kfJhpA6YaSFcxUOx7xh7HNyEX8hnDf4PHm00CPPRSYjk5qNTP5i8fQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="">
-                <button class="py-2">SAVE EDIT</button>
+              <img *ngIf="bookData.coverImage" [src]="bookData.coverImage" alt="Selected Cover">
+                <button class="py-2" (click)="addBook()" [disabled]="isLoading">
+                    <span *ngIf="!isLoading">SAVE BOOK</span>
+                    <div *ngIf="isLoading" class="loading-spinner"></div>
+
+                </button>
             </div>
         </div>
     </div>

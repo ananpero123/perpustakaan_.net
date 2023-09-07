@@ -14,152 +14,129 @@
         </tr>
       </thead>
       <tbody >
-        <tr>
-          <th class="py-lg-3" scope="row">1</th>
-          <td class="py-lg-3">Mark</td>
-          <td class="py-lg-3">Otto</td>
-          <td class="py-lg-3">@mdo</td>
-          <td class="py-lg-3">Mark</td>
-          <td class="py-lg-3">Otto</td>
-          <td class="py-lg-3">@mdo</td>
+        <tr *ngFor="let order of orders; let i = index">
+          <th class="py-lg-3" scope="row">{{ i + 1 }}</th>
+          <td class="py-lg-3">{{ order.username }}</td>
+          <td class="py-lg-3">{{ order.email }}</td>
+          <td class="py-lg-3">{{ order.bookTitle }}</td>
+          <td class="py-lg-3">{{ order.author }}</td>
+          <td class="py-lg-3">{{ order.loanDate | date }}</td>
+          <td class="py-lg-3">{{ order.returnDate | date }}</td>
           <td class="py-lg-3" style="display: flex; flex-direction: row;">
 
-                <div class="modal fade" id="exampleModalToggle1" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-                    <div class="modal-dialog modal-dialog-centered">
-                      <div class="modal-content" >
-                        <div class="modal-header" style="border: none;">
-                          <h1 class="modal-title fs-5" id="exampleModalToggleLabel"></h1>
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body model_book" style="border: none; ">
-                          <h5 style="z-index: 100000;" class="text-center">Do You Allow it?</h5>
-                        <div class="row my-lg-5 my-md-4 m-3">
-                            <div class="col-6 text-center">
-                                <button type="button" class="btn btn1">YES</button>
-                            </div>
-                            <div class="col-6 text-center">
+            <div *ngIf="order.status === 'pending'">
+              <div class="modal fade" id="exampleModalToggle1" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1" >
+                <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content" >
+                          <div class="modal-header" style="border: none;">
+                            <h1 class="modal-title fs-5" id="exampleModalToggleLabel"></h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body model_book" style="border: none; ">
+                            <h5 style="z-index: 100000;" class="text-center">Do You Allow it?</h5>
+                          <div class="row my-lg-5 my-md-4 m-3">
+                              <div class="col-6 text-center">
+                                <button type="button" class="btn btn1" data-bs-dismiss="modal" (click)="updateLoanStatus()">YES</button>
+                              </div>
+                              <div class="col-6 text-center">
                                 <button type="button" class="btn btn2">NO</button>
-                            </div>
+                              </div>
+                          </div>
+                          </div>
                         </div>
-                        
-                        </div>
-                        
                       </div>
                     </div>
-                  </div>
-                  <button style="background-color: transparent; border: none;"  class="btn btn-primary me-lg-3 me-md-2 me-1" data-bs-target="#exampleModalToggle1" data-bs-toggle="modal">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-                        <rect width="28" height="28" rx="8" fill="#21F736"/>
-                        <path d="M11.9013 13.349C11.7287 13.1763 11.4946 13.0794 11.2505 13.0794C11.0064 13.0794 10.7723 13.1763 10.5997 13.349C10.4271 13.5216 10.3301 13.7557 10.3301 13.9998C10.3301 14.2439 10.4271 14.478 10.5997 14.6506L13.3497 17.4006C13.4353 17.4856 13.5369 17.5528 13.6486 17.5984C13.7603 17.644 13.8799 17.6672 14.0005 17.6665C14.126 17.6625 14.2493 17.6328 14.3629 17.5791C14.4764 17.5255 14.5777 17.4492 14.6605 17.3548L21.0772 10.0215C21.2253 9.83751 21.2968 9.60347 21.2766 9.36813C21.2564 9.1328 21.1462 8.91434 20.9688 8.7583C20.7915 8.60226 20.5608 8.52069 20.3248 8.53059C20.0888 8.5405 19.8658 8.64111 19.7022 8.81146L14.0005 15.4115L11.9013 13.349Z" fill="white"/>
-                        <path d="M22.2499 13.0835C22.0068 13.0835 21.7736 13.1801 21.6017 13.352C21.4298 13.5239 21.3332 13.757 21.3332 14.0002C21.3332 15.9451 20.5606 17.8103 19.1854 19.1856C17.8101 20.5609 15.9448 21.3335 13.9999 21.3335C12.5517 21.3328 11.136 20.9034 9.93153 20.0992C8.72702 19.2951 7.78759 18.1523 7.23168 16.815C6.67578 15.4777 6.52829 14.0058 6.80782 12.5847C7.08736 11.1637 7.78139 9.85727 8.80241 8.83016C9.48139 8.1421 10.2908 7.59637 11.1832 7.22491C12.0757 6.85345 13.0332 6.66372 13.9999 6.66683C14.5861 6.6705 15.1701 6.73812 15.7416 6.8685C15.8612 6.90549 15.9871 6.91759 16.1115 6.90406C16.236 6.89053 16.3563 6.85165 16.4652 6.78983C16.574 6.728 16.6691 6.64453 16.7444 6.54457C16.8198 6.4446 16.8739 6.33027 16.9033 6.2086C16.9328 6.08694 16.9371 5.96052 16.9158 5.83715C16.8946 5.71379 16.8483 5.59608 16.7798 5.49129C16.7113 5.3865 16.6221 5.29684 16.5176 5.22786C16.4132 5.15887 16.2957 5.11201 16.1724 5.09016C15.4603 4.92264 14.7315 4.83653 13.9999 4.8335C12.1889 4.8429 10.4212 5.38856 8.92001 6.40159C7.4188 7.41463 6.2513 8.84965 5.56485 10.5256C4.8784 12.2015 4.70377 14.0432 5.06299 15.8182C5.42221 17.5933 6.29919 19.2222 7.58324 20.4993C9.28521 22.2021 11.5924 23.1612 13.9999 23.1668C16.4311 23.1668 18.7626 22.2011 20.4817 20.482C22.2008 18.7629 23.1666 16.4313 23.1666 14.0002C23.1666 13.757 23.07 13.5239 22.8981 13.352C22.7262 13.1801 22.493 13.0835 22.2499 13.0835Z" fill="white"/>
-                    </svg>
-                </button>
+  
+                    <button style="background-color: transparent; border: none;" class="btn btn-primary"
+                    (click)="openModal(order, 'allow')" data-bs-target="#exampleModalToggle1" data-bs-toggle="modal">          
+                      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                          <rect width="28" height="28" rx="8" fill="#21F736"/>
+                          <path d="M11.9013 13.349C11.7287 13.1763 11.4946 13.0794 11.2505 13.0794C11.0064 13.0794 10.7723 13.1763 10.5997 13.349C10.4271 13.5216 10.3301 13.7557 10.3301 13.9998C10.3301 14.2439 10.4271 14.478 10.5997 14.6506L13.3497 17.4006C13.4353 17.4856 13.5369 17.5528 13.6486 17.5984C13.7603 17.644 13.8799 17.6672 14.0005 17.6665C14.126 17.6625 14.2493 17.6328 14.3629 17.5791C14.4764 17.5255 14.5777 17.4492 14.6605 17.3548L21.0772 10.0215C21.2253 9.83751 21.2968 9.60347 21.2766 9.36813C21.2564 9.1328 21.1462 8.91434 20.9688 8.7583C20.7915 8.60226 20.5608 8.52069 20.3248 8.53059C20.0888 8.5405 19.8658 8.64111 19.7022 8.81146L14.0005 15.4115L11.9013 13.349Z" fill="white"/>
+                          <path d="M22.2499 13.0835C22.0068 13.0835 21.7736 13.1801 21.6017 13.352C21.4298 13.5239 21.3332 13.757 21.3332 14.0002C21.3332 15.9451 20.5606 17.8103 19.1854 19.1856C17.8101 20.5609 15.9448 21.3335 13.9999 21.3335C12.5517 21.3328 11.136 20.9034 9.93153 20.0992C8.72702 19.2951 7.78759 18.1523 7.23168 16.815C6.67578 15.4777 6.52829 14.0058 6.80782 12.5847C7.08736 11.1637 7.78139 9.85727 8.80241 8.83016C9.48139 8.1421 10.2908 7.59637 11.1832 7.22491C12.0757 6.85345 13.0332 6.66372 13.9999 6.66683C14.5861 6.6705 15.1701 6.73812 15.7416 6.8685C15.8612 6.90549 15.9871 6.91759 16.1115 6.90406C16.236 6.89053 16.3563 6.85165 16.4652 6.78983C16.574 6.728 16.6691 6.64453 16.7444 6.54457C16.8198 6.4446 16.8739 6.33027 16.9033 6.2086C16.9328 6.08694 16.9371 5.96052 16.9158 5.83715C16.8946 5.71379 16.8483 5.59608 16.7798 5.49129C16.7113 5.3865 16.6221 5.29684 16.5176 5.22786C16.4132 5.15887 16.2957 5.11201 16.1724 5.09016C15.4603 4.92264 14.7315 4.83653 13.9999 4.8335C12.1889 4.8429 10.4212 5.38856 8.92001 6.40159C7.4188 7.41463 6.2513 8.84965 5.56485 10.5256C4.8784 12.2015 4.70377 14.0432 5.06299 15.8182C5.42221 17.5933 6.29919 19.2222 7.58324 20.4993C9.28521 22.2021 11.5924 23.1612 13.9999 23.1668C16.4311 23.1668 18.7626 22.2011 20.4817 20.482C22.2008 18.7629 23.1666 16.4313 23.1666 14.0002C23.1666 13.757 23.07 13.5239 22.8981 13.352C22.7262 13.1801 22.493 13.0835 22.2499 13.0835Z" fill="white"/>
+                      </svg>
+                  </button>
+            </div>
+            
 
-            <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-                <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content" >
-                    <div class="modal-header" style="border: none;">
-                      <h1 class="modal-title fs-5" id="exampleModalToggleLabel"></h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div *ngIf="order.status === 'pending'">
+              <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content" >
+                      <div class="modal-header" style="border: none;">
+                        <h1 class="modal-title fs-5" id="exampleModalToggleLabel"></h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body model_book" style="border: none; ">
+                        <h5 style="z-index: 100000;" class="text-center">Do you want to reject</h5>
+                      <div class="row my-lg-5 my-md-4 m-3">
+                          <div class="col-6 text-center">
+                            <button type="button" class="btn btn1" (click)="deleteOrder()">YES</button>
+                          </div>
+                          <div class="col-6 text-center">
+                              <button type="button" class="btn btn2">NO</button>
+                          </div>
+                      </div>
+                      
+                      </div>
+                      
                     </div>
-                    <div class="modal-body model_book" style="border: none; ">
-                      <h5 style="z-index: 100000;" class="text-center">Do you want aaaato borrow this book?</h5>
-                    <div class="row my-lg-5 my-md-4 m-3">
-                        <div class="col-6 text-center">
-                            <button type="button" class="btn btn1">YES</button>
-                        </div>
-                        <div class="col-6 text-center">
-                            <button type="button" class="btn btn2">NO</button>
-                        </div>
-                    </div>
-                    
-                    </div>
-                    
                   </div>
                 </div>
-              </div>
-              <button style="background-color: transparent; border: none;" class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-                    <rect width="28" height="28" rx="8" fill="#FF1010"/>
-                    <path d="M15.4099 14.0002L19.7099 9.71019C19.8982 9.52188 20.004 9.26649 20.004 9.00019C20.004 8.73388 19.8982 8.47849 19.7099 8.29019C19.5216 8.10188 19.2662 7.99609 18.9999 7.99609C18.7336 7.99609 18.4782 8.10188 18.2899 8.29019L13.9999 12.5902L9.70994 8.29019C9.52164 8.10188 9.26624 7.99609 8.99994 7.99609C8.73364 7.99609 8.47824 8.10188 8.28994 8.29019C8.10164 8.47849 7.99585 8.73388 7.99585 9.00019C7.99585 9.26649 8.10164 9.52188 8.28994 9.71019L12.5899 14.0002L8.28994 18.2902C8.19621 18.3831 8.12182 18.4937 8.07105 18.6156C8.02028 18.7375 7.99414 18.8682 7.99414 19.0002C7.99414 19.1322 8.02028 19.2629 8.07105 19.3848C8.12182 19.5066 8.19621 19.6172 8.28994 19.7102C8.3829 19.8039 8.4935 19.8783 8.61536 19.9291C8.73722 19.9798 8.86793 20.006 8.99994 20.006C9.13195 20.006 9.26266 19.9798 9.38452 19.9291C9.50637 19.8783 9.61698 19.8039 9.70994 19.7102L13.9999 15.4102L18.2899 19.7102C18.3829 19.8039 18.4935 19.8783 18.6154 19.9291C18.7372 19.9798 18.8679 20.006 18.9999 20.006C19.132 20.006 19.2627 19.9798 19.3845 19.9291C19.5064 19.8783 19.617 19.8039 19.7099 19.7102C19.8037 19.6172 19.8781 19.5066 19.9288 19.3848C19.9796 19.2629 20.0057 19.1322 20.0057 19.0002C20.0057 18.8682 19.9796 18.7375 19.9288 18.6156C19.8781 18.4937 19.8037 18.3831 19.7099 18.2902L15.4099 14.0002Z" fill="white"/>
-                </svg>
-            </button>
+                <button style="background-color: transparent; border: none;" class="btn btn-primary"
+                  (click)="openModal(order, 'allow')" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">
+  
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                      <rect width="28" height="28" rx="8" fill="#FF1010"/>
+                      <path d="M15.4099 14.0002L19.7099 9.71019C19.8982 9.52188 20.004 9.26649 20.004 9.00019C20.004 8.73388 19.8982 8.47849 19.7099 8.29019C19.5216 8.10188 19.2662 7.99609 18.9999 7.99609C18.7336 7.99609 18.4782 8.10188 18.2899 8.29019L13.9999 12.5902L9.70994 8.29019C9.52164 8.10188 9.26624 7.99609 8.99994 7.99609C8.73364 7.99609 8.47824 8.10188 8.28994 8.29019C8.10164 8.47849 7.99585 8.73388 7.99585 9.00019C7.99585 9.26649 8.10164 9.52188 8.28994 9.71019L12.5899 14.0002L8.28994 18.2902C8.19621 18.3831 8.12182 18.4937 8.07105 18.6156C8.02028 18.7375 7.99414 18.8682 7.99414 19.0002C7.99414 19.1322 8.02028 19.2629 8.07105 19.3848C8.12182 19.5066 8.19621 19.6172 8.28994 19.7102C8.3829 19.8039 8.4935 19.8783 8.61536 19.9291C8.73722 19.9798 8.86793 20.006 8.99994 20.006C9.13195 20.006 9.26266 19.9798 9.38452 19.9291C9.50637 19.8783 9.61698 19.8039 9.70994 19.7102L13.9999 15.4102L18.2899 19.7102C18.3829 19.8039 18.4935 19.8783 18.6154 19.9291C18.7372 19.9798 18.8679 20.006 18.9999 20.006C19.132 20.006 19.2627 19.9798 19.3845 19.9291C19.5064 19.8783 19.617 19.8039 19.7099 19.7102C19.8037 19.6172 19.8781 19.5066 19.9288 19.3848C19.9796 19.2629 20.0057 19.1322 20.0057 19.0002C20.0057 18.8682 19.9796 18.7375 19.9288 18.6156C19.8781 18.4937 19.8037 18.3831 19.7099 18.2902L15.4099 14.0002Z" fill="white"/>
+                  </svg>
+              </button>
+            </div>
+
+
+            <div *ngIf="order.status === 'approve'">
+              <div class="modal fade" id="exampleModalTogglea" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1" >
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content" >
+                      <div class="modal-header" style="border: none;">
+                        <h1 class="modal-title fs-5" id="exampleModalToggleLabel"></h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body model_book" style="border: none; ">
+                        <h5 style="z-index: 100000;" class="text-center">Confirm Return</h5>
+                      <div class="row my-lg-5 my-md-4 m-3">
+                          <div class="col-6 text-center">
+                            <button type="button" class="btn btn1" (click)="confirmReturn()">YES</button>
+                          </div>
+                          <div class="col-6 text-center">
+                              <button type="button" class="btn btn2">NO</button>
+                          </div>
+                      </div>
+                      
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+  
+  
+                <button style="background-color: transparent; border: none;" class="btn btn-primary"
+                (click)="openModal(order, 'return')" data-bs-target="#exampleModalTogglea" data-bs-toggle="modal">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                      <rect width="28" height="28" rx="8" fill="#FF1010"/>
+                      <path d="M15.4099 14.0002L19.7099 9.71019C19.8982 9.52188 20.004 9.26649 20.004 9.00019C20.004 8.73388 19.8982 8.47849 19.7099 8.29019C19.5216 8.10188 19.2662 7.99609 18.9999 7.99609C18.7336 7.99609 18.4782 8.10188 18.2899 8.29019L13.9999 12.5902L9.70994 8.29019C9.52164 8.10188 9.26624 7.99609 8.99994 7.99609C8.73364 7.99609 8.47824 8.10188 8.28994 8.29019C8.10164 8.47849 7.99585 8.73388 7.99585 9.00019C7.99585 9.26649 8.10164 9.52188 8.28994 9.71019L12.5899 14.0002L8.28994 18.2902C8.19621 18.3831 8.12182 18.4937 8.07105 18.6156C8.02028 18.7375 7.99414 18.8682 7.99414 19.0002C7.99414 19.1322 8.02028 19.2629 8.07105 19.3848C8.12182 19.5066 8.19621 19.6172 8.28994 19.7102C8.3829 19.8039 8.4935 19.8783 8.61536 19.9291C8.73722 19.9798 8.86793 20.006 8.99994 20.006C9.13195 20.006 9.26266 19.9798 9.38452 19.9291C9.50637 19.8783 9.61698 19.8039 9.70994 19.7102L13.9999 15.4102L18.2899 19.7102C18.3829 19.8039 18.4935 19.8783 18.6154 19.9291C18.7372 19.9798 18.8679 20.006 18.9999 20.006C19.132 20.006 19.2627 19.9798 19.3845 19.9291C19.5064 19.8783 19.617 19.8039 19.7099 19.7102C19.8037 19.6172 19.8781 19.5066 19.9288 19.3848C19.9796 19.2629 20.0057 19.1322 20.0057 19.0002C20.0057 18.8682 19.9796 18.7375 19.9288 18.6156C19.8781 18.4937 19.8037 18.3831 19.7099 18.2902L15.4099 14.0002Z" fill="white"/>
+                  </svg>
+              </button>
+            </div>
+
+
+
+
+
+
           </td>
 
         </tr>
-        <tr>
-          <th class="py-lg-3" scope="row">1</th>
-          <td class="py-lg-3">Mark</td>
-          <td class="py-lg-3">Otto</td>
-          <td class="py-lg-3">@mdo</td>
-          <td class="py-lg-3">Mark</td>
-          <td class="py-lg-3">Otto</td>
-          <td class="py-lg-3">@mdo</td>
-          <td class="py-lg-3" style="display: flex; flex-direction: row;">
 
-                <div class="modal fade" id="exampleModalToggle1" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-                    <div class="modal-dialog modal-dialog-centered">
-                      <div class="modal-content" >
-                        <div class="modal-header" style="border: none;">
-                          <h1 class="modal-title fs-5" id="exampleModalToggleLabel"></h1>
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body model_book" style="border: none; ">
-                          <h5 style="z-index: 100000;" class="text-center">Do You Allow it?</h5>
-                        <div class="row my-lg-5 my-md-4 m-3">
-                            <div class="col-6 text-center">
-                                <button type="button" class="btn btn1">YES</button>
-                            </div>
-                            <div class="col-6 text-center">
-                                <button type="button" class="btn btn2">NO</button>
-                            </div>
-                        </div>
-                        
-                        </div>
-                        
-                      </div>
-                    </div>
-                  </div>
-                  <button style="background-color: transparent; border: none;"  class="btn btn-primary me-lg-3 me-md-2 me-1" data-bs-target="#exampleModalToggle1" data-bs-toggle="modal">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-                        <rect width="28" height="28" rx="8" fill="#21F736"/>
-                        <path d="M11.9013 13.349C11.7287 13.1763 11.4946 13.0794 11.2505 13.0794C11.0064 13.0794 10.7723 13.1763 10.5997 13.349C10.4271 13.5216 10.3301 13.7557 10.3301 13.9998C10.3301 14.2439 10.4271 14.478 10.5997 14.6506L13.3497 17.4006C13.4353 17.4856 13.5369 17.5528 13.6486 17.5984C13.7603 17.644 13.8799 17.6672 14.0005 17.6665C14.126 17.6625 14.2493 17.6328 14.3629 17.5791C14.4764 17.5255 14.5777 17.4492 14.6605 17.3548L21.0772 10.0215C21.2253 9.83751 21.2968 9.60347 21.2766 9.36813C21.2564 9.1328 21.1462 8.91434 20.9688 8.7583C20.7915 8.60226 20.5608 8.52069 20.3248 8.53059C20.0888 8.5405 19.8658 8.64111 19.7022 8.81146L14.0005 15.4115L11.9013 13.349Z" fill="white"/>
-                        <path d="M22.2499 13.0835C22.0068 13.0835 21.7736 13.1801 21.6017 13.352C21.4298 13.5239 21.3332 13.757 21.3332 14.0002C21.3332 15.9451 20.5606 17.8103 19.1854 19.1856C17.8101 20.5609 15.9448 21.3335 13.9999 21.3335C12.5517 21.3328 11.136 20.9034 9.93153 20.0992C8.72702 19.2951 7.78759 18.1523 7.23168 16.815C6.67578 15.4777 6.52829 14.0058 6.80782 12.5847C7.08736 11.1637 7.78139 9.85727 8.80241 8.83016C9.48139 8.1421 10.2908 7.59637 11.1832 7.22491C12.0757 6.85345 13.0332 6.66372 13.9999 6.66683C14.5861 6.6705 15.1701 6.73812 15.7416 6.8685C15.8612 6.90549 15.9871 6.91759 16.1115 6.90406C16.236 6.89053 16.3563 6.85165 16.4652 6.78983C16.574 6.728 16.6691 6.64453 16.7444 6.54457C16.8198 6.4446 16.8739 6.33027 16.9033 6.2086C16.9328 6.08694 16.9371 5.96052 16.9158 5.83715C16.8946 5.71379 16.8483 5.59608 16.7798 5.49129C16.7113 5.3865 16.6221 5.29684 16.5176 5.22786C16.4132 5.15887 16.2957 5.11201 16.1724 5.09016C15.4603 4.92264 14.7315 4.83653 13.9999 4.8335C12.1889 4.8429 10.4212 5.38856 8.92001 6.40159C7.4188 7.41463 6.2513 8.84965 5.56485 10.5256C4.8784 12.2015 4.70377 14.0432 5.06299 15.8182C5.42221 17.5933 6.29919 19.2222 7.58324 20.4993C9.28521 22.2021 11.5924 23.1612 13.9999 23.1668C16.4311 23.1668 18.7626 22.2011 20.4817 20.482C22.2008 18.7629 23.1666 16.4313 23.1666 14.0002C23.1666 13.757 23.07 13.5239 22.8981 13.352C22.7262 13.1801 22.493 13.0835 22.2499 13.0835Z" fill="white"/>
-                    </svg>
-                </button>
-
-            <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-                <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content" >
-                    <div class="modal-header" style="border: none;">
-                      <h1 class="modal-title fs-5" id="exampleModalToggleLabel"></h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body model_book" style="border: none; ">
-                      <h5 style="z-index: 100000;" class="text-center">Do you want aaaato borrow this book?</h5>
-                    <div class="row my-lg-5 my-md-4 m-3">
-                        <div class="col-6 text-center">
-                            <button type="button" class="btn btn1">YES</button>
-                        </div>
-                        <div class="col-6 text-center">
-                            <button type="button" class="btn btn2">NO</button>
-                        </div>
-                    </div>
-                    
-                    </div>
-                    
-                  </div>
-                </div>
-              </div>
-              <button style="background-color: transparent; border: none;" class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-                    <rect width="28" height="28" rx="8" fill="#FF1010"/>
-                    <path d="M15.4099 14.0002L19.7099 9.71019C19.8982 9.52188 20.004 9.26649 20.004 9.00019C20.004 8.73388 19.8982 8.47849 19.7099 8.29019C19.5216 8.10188 19.2662 7.99609 18.9999 7.99609C18.7336 7.99609 18.4782 8.10188 18.2899 8.29019L13.9999 12.5902L9.70994 8.29019C9.52164 8.10188 9.26624 7.99609 8.99994 7.99609C8.73364 7.99609 8.47824 8.10188 8.28994 8.29019C8.10164 8.47849 7.99585 8.73388 7.99585 9.00019C7.99585 9.26649 8.10164 9.52188 8.28994 9.71019L12.5899 14.0002L8.28994 18.2902C8.19621 18.3831 8.12182 18.4937 8.07105 18.6156C8.02028 18.7375 7.99414 18.8682 7.99414 19.0002C7.99414 19.1322 8.02028 19.2629 8.07105 19.3848C8.12182 19.5066 8.19621 19.6172 8.28994 19.7102C8.3829 19.8039 8.4935 19.8783 8.61536 19.9291C8.73722 19.9798 8.86793 20.006 8.99994 20.006C9.13195 20.006 9.26266 19.9798 9.38452 19.9291C9.50637 19.8783 9.61698 19.8039 9.70994 19.7102L13.9999 15.4102L18.2899 19.7102C18.3829 19.8039 18.4935 19.8783 18.6154 19.9291C18.7372 19.9798 18.8679 20.006 18.9999 20.006C19.132 20.006 19.2627 19.9798 19.3845 19.9291C19.5064 19.8783 19.617 19.8039 19.7099 19.7102C19.8037 19.6172 19.8781 19.5066 19.9288 19.3848C19.9796 19.2629 20.0057 19.1322 20.0057 19.0002C20.0057 18.8682 19.9796 18.7375 19.9288 18.6156C19.8781 18.4937 19.8037 18.3831 19.7099 18.2902L15.4099 14.0002Z" fill="white"/>
-                </svg>
-            </button>
-          </td>
-
-        </tr>
       </tbody>
     </table>
   </div>
